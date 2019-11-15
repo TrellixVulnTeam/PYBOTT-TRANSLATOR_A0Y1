@@ -1,19 +1,29 @@
 from yandex.Translater import Translater
 from fuzzywuzzy import process ## import fuzz
 #ctrl+[ ดึงไปทางซ้าย
-tr = Translater()
-tr.set_key('trnsl.1.1.20191108T161057Z.789702196707e5b2.41eba9a721c3e06bd2ae57a2a1189764eb9e1b8d') # Api key found on https://translate.yandex.com/developers/keys
+# Api key found on https://translate.yandex.com/developers/keys
 
 ## สำหรับแปลภาษา ใส่ คำที่ต้องการแปล + ภาษาที่ต้องการแปล
 def tran(text_from_user,to_lang,tr):
+    data = {}
+    if to_lang == 'fr':
+        data['to_lang'] = 'ฝรั่งเศษ'
+    elif to_lang == 'de':
+        data['to_lang'] = 'เยอรมัน'
+    elif to_lang == 'en':
+        data['to_lang'] = 'อังกฤษ'
+    elif to_lang == 'ja':
+        data['to_lang'] = 'ญี่ปุ่น'
+        
     if to_lang is None:
-        return "ไม่ทราบว่าต้องการแปลภาษาอะไรคะ? กรุณาระบุใหม่ด้วยคะ"
+        return None
     else :
         tr.set_from_lang('th')
         tr.set_to_lang(to_lang)
         tr.set_text(text_from_user)
         text_output = tr.translate()
-        return "จากประโยคที่ได้พิมพ์มา แปลเป็นภาษา"+to_lang+"ได้ว่า : "+text_output
+        data['text_output'] = text_output
+        return data
 
 ## ดูว่ายูสเซอต้องการแปลภาษาอะไร
 def check_lang(Input):

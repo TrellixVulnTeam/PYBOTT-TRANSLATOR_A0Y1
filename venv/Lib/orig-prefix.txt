@@ -1,1 +1,1 @@
-c:\users\sample\appdata\local\programs\python\python37-32
+c:\users\disen\appdata\local\programs\python\python37

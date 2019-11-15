@@ -4,55 +4,43 @@ richdata = {
     "height": 1686
   },
   "selected": True,
-  "name": "Rich Menu 1",
-  "chatBarText": "Bulletin",
+  "name": "แถบช่วยเหลือ",
+  "chatBarText": "แถบช่วยเหลือ",
   "areas": [
     {
       "bounds": {
         "x": 0,
-        "y": 0,
-        "width": 2500,
-        "height": 924
+        "y": 8,
+        "width": 2496,
+        "height": 886
+      },
+      "action": {
+        "type": "message",
+        "text": "สนใจเรียนแชทบอท"
+      }
+    },
+    {
+      "bounds": {
+        "x": 8,
+        "y": 919,
+        "width": 1013,
+        "height": 755
+      },
+      "action": {
+        "type": "message",
+        "text": "ฐานข้อมูลผู้ใช้งาน"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1038,
+        "y": 919,
+        "width": 1454,
+        "height": 750
       },
       "action": {
         "type": "message",
         "text": "แปลข้อความ"
-      }
-    },
-    {
-      "bounds": {
-        "x": 10,
-        "y": 937,
-        "width": 793,
-        "height": 730
-      },
-      "action": {
-        "type": "uri",
-        "uri": "https://en.wikipedia.org/wiki/France"
-      }
-    },
-    {
-      "bounds": {
-        "x": 808,
-        "y": 932,
-        "width": 856,
-        "height": 730
-      },
-      "action": {
-        "type": "message",
-        "text": "https://en.wikipedia.org/wiki/France"
-      }
-    },
-    {
-      "bounds": {
-        "x": 1693,
-        "y": 946,
-        "width": 784,
-        "height": 702
-      },
-      "action": {
-        "type": "message",
-        "text": "https://en.wikipedia.org/wiki/France"
       }
     }
   ]
