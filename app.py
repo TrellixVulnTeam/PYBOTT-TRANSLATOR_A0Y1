@@ -168,7 +168,8 @@ def handle_message(event):
         text2 = TextSendMessage(text="ท่านสามารถใช้งานได้โดยการกดปุ่ม แปลข้อความ เพื่อเริ่มบริการแปล",quick_reply=qreply)
         
         line_bot_api.reply_message(replytoken,[imagemap,text1,text2])
-        
+    
+    print(user_current_session)
         
         
 
